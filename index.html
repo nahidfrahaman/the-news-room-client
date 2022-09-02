@@ -13,9 +13,33 @@
     type="text/css"
   />
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- external css link  -->
+  <link rel="stylesheet" href="/style/styles.css" />
 
   <body>
-    <header class="text-5xl text-center"><h1>Welcome to news 🚻</h1></header>
+    <!-- header section is started  -->
+    <header class="w-5/6 mx-auto">
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl nav-titile"
+            >The News Room</a
+          >
+        </div>
+        <div class="flex-none">
+          <ul class="menu menu-horizontal p-0">
+            <li><a>News</a></li>
+            <li><a>Blog</a></li>
+          </ul>
+        </div>
+        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+          <div class="w-10 rounded-full">
+            <img src="https://placeimg.com/80/80/people" />
+          </div>
+        </label>
+      </div>
+      <hr />
+      <!-- menubar  -->
+    </header>
     <main></main>
     <script src="/js/portal.js"></script>
   </body>

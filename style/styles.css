@@ -1,0 +1,12 @@
+/* goole font is use  */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-titile{
+  color: 
+  #FF5E19;
+  font-family: 'Berkshire Swash', cursive;
+}
