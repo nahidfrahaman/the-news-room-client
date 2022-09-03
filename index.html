@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The News Room</title>
   </head>
+  <!-- font awesome kit  -->
+  <script
+    src="https://kit.fontawesome.com/b790da7711.js"
+    crossorigin="anonymous"
+  ></script>
   <!-- daisyui cnd link  -->
   <link
     href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
@@ -27,20 +32,56 @@
         </div>
         <div class="flex-none">
           <ul class="menu menu-horizontal p-0">
-            <li><a>News</a></li>
+            <li>
+              <a><span class="text-orange-500">News</span></a>
+            </li>
             <li><a>Blog</a></li>
           </ul>
         </div>
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
           <div class="w-10 rounded-full">
-            <img src="https://placeimg.com/80/80/people" />
+            <img src="/image/tech.png" />
           </div>
         </label>
       </div>
       <hr />
       <!-- menubar  -->
+      <ul
+        id="menu-bar-item"
+        class="menu flex lg:flex-row bg-base-100 rounded-box flex-sm-col"
+      ></ul>
     </header>
-    <main></main>
+    <div class="w-5/6 mx-auto"></div>
+    <main>
+      <!-- display no of catagoery item  -->
+      <section class="w-5/6 mx-auto mt-8 text-center">
+        <h1>4 times found</h1>
+      </section>
+
+      <!-- display news portal section  -->
+      <section class="w-5/6 mx-auto mt-8 text-center">
+        <div id="display-portal" class="grid grid-rows-1 gap-4"></div>
+      </section>
+
+      <!-- modal section  -->
+      <section>
+        <input type="checkbox" id="my-modal-4" class="modal-toggle" />
+        <label for="my-modal-4" class="modal cursor-pointer">
+          <label class="modal-box relative" for="">
+            <div id="modal-body">
+              <!-- <h3 class="text-lg font-bold">
+              Congratulations random Internet user!
+            </h3>
+            <p class="py-4">
+              You've been selected for a chance to get one year of subscription
+              to use Wikipedia for free!
+            </p> -->
+              <!-- <img src="" alt="" /> -->
+            </div>
+          </label>
+        </label>
+      </section>
+    </main>
     <script src="/js/portal.js"></script>
   </body>
 </html>
