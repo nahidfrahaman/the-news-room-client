@@ -1,8 +1,15 @@
 // loadCatagory for menbar 
 const loadCatagory= async()=>{
-    const res= await fetch('https://openapi.programming-hero.com/api/news/categories')
-    const data= await res.json();
-    return data.data.news_category;
+    try{
+        const res= await fetch('https://openapi.programming-hero.com/api/news/categories')
+        const data= await res.json();
+        return data.data.news_category;
+    }
+    catch (error) {
+      console.log(error)
+    }
+    
+   
 }
 
 // set catagory to manubar 
@@ -31,6 +38,9 @@ const loadPortal=(idportal)=>{
     fetch(`https://openapi.programming-hero.com/api/news/category/${idportal}`)
     .then(res=> res.json())
     .then(data=> displayPortal(data.data))
+    .catch(error=>{
+        console.log(error);
+    })
 }
 
 // display portal item 
