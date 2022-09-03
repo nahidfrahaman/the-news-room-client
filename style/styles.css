@@ -16,3 +16,6 @@ body{
 .text-color{
   color: #FF5E19;
 }
+main{
+  min-height: 270px;
+}
