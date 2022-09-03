@@ -5,25 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The News Room</title>
-  </head>
-  <!-- font awesome kit  -->
+    <!-- font awesome kit  -->
   <script
-    src="https://kit.fontawesome.com/b790da7711.js"
-    crossorigin="anonymous"
-  ></script>
-  <!-- daisyui cnd link  -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
-    rel="stylesheet"
-    type="text/css"
-  />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- external css link  -->
-  <link rel="stylesheet" href="/style/styles.css" />
+     src="https://kit.fontawesome.com/b790da7711.js"
+     crossorigin="anonymous"
+></script>
+ <!-- daisyui cnd link  -->
+   <link
+     href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+     rel="stylesheet"
+     type="text/css"
+     />
 
-  <body>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- external css link  -->
+    <link rel="stylesheet" href="/style/styles.css" />
+</head>
+
+<body>
     <!-- header section is started  -->
     <header class="w-5/6 mx-auto">
+      <!-- navbar is added  -->
       <div class="navbar bg-base-100">
         <div class="flex-1">
           <a class="btn btn-ghost normal-case text-xl nav-titile"
@@ -35,7 +37,7 @@
             <li>
               <a><span class="text-orange-500">News</span></a>
             </li>
-            <li><a>Blog</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
@@ -52,6 +54,8 @@
       ></ul>
     </header>
     <div class="w-5/6 mx-auto"></div>
+    <!-- header section is end  -->
+    <!-- main section is started  -->
     <main>
       <!-- display nuber  of catagoery item  -->
       <section class="w-5/6 mx-auto mt-8 text-center">
@@ -59,6 +63,20 @@
           id="num-of-portal"
           class="shadow-lg w-1/2 mx-auto p-2 hidden text-color"
         ></div>
+      </section>
+      <!-- display sorted section  -->
+      <section id="sorted-section" class="w-5/6 mx-auto hidden" >
+        <h4 class="text-xl">Sort by view</h4>
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box w-36 "
+        >
+          <div class="collapse-title text-sm font-medium text-color">
+            default
+          </div>
+          
+          </div>
+        </div>
       </section>
 
       <!-- display news portal section  -->
@@ -88,6 +106,12 @@
         <progress class="progress w-100"></progress>
       </section>
     </main>
+     <!-- main section is end -->
+     <!-- footer section is start -->
+    <footer>
+
+    </footer>
+    <!-- footer section is start -->
     <script src="/js/portal.js"></script>
   </body>
 </html>
