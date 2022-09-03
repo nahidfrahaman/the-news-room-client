@@ -1,4 +1,4 @@
-// loadCatagory for menbar 
+// loadCatagory for menubar 
 const loadCatagory= async()=>{
     try{
         const res= await fetch('https://openapi.programming-hero.com/api/news/categories')
@@ -105,6 +105,7 @@ const displayPortal=(data)=>{
         </div>
          
         `
+    // append to displayPortal
     displayContainer.appendChild(div);
     } )
 displaySpinner(false);
@@ -117,9 +118,7 @@ const  displayDetailsNews= async id=>{
     fetch(url)
     .then(res=> res.json())
     .then(data=> displayModal(data.data))
-    // const res= await fetch(url)
-    // const data= await res.json()
-    // return data;
+    
   
 }
 // ---------display-------- modal 
