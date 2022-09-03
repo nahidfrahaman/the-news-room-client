@@ -25,6 +25,9 @@ const setManu= async()=>{
 setManu()
 
 const loadPortal=(idportal)=>{
+    // starting spinner 
+    displaySpinner(true);
+
     fetch(`https://openapi.programming-hero.com/api/news/category/${idportal}`)
     .then(res=> res.json())
     .then(data=> displayPortal(data.data))
@@ -85,7 +88,7 @@ const displayPortal=(data)=>{
         `
     displayContainer.appendChild(div);
     } )
-
+    displaySpinner(false);
 }
 
 // load details for  modal
@@ -133,5 +136,14 @@ const {author, title, details, thumbnail_url,total_view}=item;
 
 }
 
+const displaySpinner=(istrue)=>{
+    const spinner= document.getElementById('spinner')
+   if(istrue=== true){
+    spinner.classList.remove('hidden')
+   }
+   else{
+    spinner.classList.add('hidden')
+   }
+}
 
    
