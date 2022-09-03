@@ -32,14 +32,30 @@ const loadPortal=(idportal)=>{
 
 // display portal item 
 const displayPortal=(data)=>{
-    // console.log(data)
+    console.log(data.length)
+    // set number of portal 
+    const displayNmofportal= document.getElementById('num-of-portal')
+    displayNmofportal.textContent="";
+    if( data.length>0){
+        displayNmofportal.classList.remove('hidden')
+        displayNmofportal.innerHTML=`
+        <h4> ${data.length} items Found for this Category</h4>
+        `
+    }
+    else{
+        displayNmofportal.classList.remove('hidden')
+        displayNmofportal.innerHTML=`
+        <h4>No News found</h4>
+        `
+    }
+
     const displayContainer= document.getElementById('display-portal')
     displayContainer.textContent='';
     data.forEach(portalData=>{
         // console.log(portalData)
-        const {thumbnail_url, title,total_view,author,details,_id}=portalData;
+    const {thumbnail_url, title,total_view,author,details,_id}=portalData;
         // console.log(author)
-        const div= document.createElement('div')
+    const div= document.createElement('div')
         div.classList.add('card', 'lg:card-side', 'bg-base-100', 'shadow-xl')
 
         // adding inner html 
@@ -67,7 +83,7 @@ const displayPortal=(data)=>{
         </div>
          
         `
-        displayContainer.appendChild(div);
+    displayContainer.appendChild(div);
     } )
 
 }
@@ -94,7 +110,7 @@ const displayModal= data=>{
         
         console.log(item)
         
-        const {author, title, details, thumbnail_url,total_view}=item;
+const {author, title, details, thumbnail_url,total_view}=item;
         modalBody.innerHTML=`
         <p class=" text-center m-8"> Author name : ${author.name? author.name: 'no data found'}</P>
         <img class="p-2" src="${author.img}" alt="">
